@@ -1,0 +1,25 @@
+from starstream import Intent, Topology, Engine
+
+topology = Topology.simple_mesh(
+    nodes=["A", "B", "C"],
+    links=[
+        ("A", "B", {"latency": 10, "capacity": 100}),
+        ("B", "C", {"latency": 15, "capacity": 100}),
+        ("A", "C", {"latency": 40, "capacity": 50}),
+    ]
+)
+
+intent = Intent(
+    source="A",
+    destination="C",
+    bandwidth_gbps=50,
+    max_latency_ms=30
+)
+
+engine = Engine(topology)
+plan = engine.plan(intent)
+result = engine.execute(plan)
+
+print(result.summary())
+
+
