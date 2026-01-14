@@ -20,7 +20,7 @@ As wavelength-based capacity continues to expand, bandwidth increasingly shifts 
 
 Starstream began as a multi-institution, cross-disciplinary exploration initiated during a technical hackathon focused on emerging challenges in optical, electronic, and AI-driven infrastructure systems. What started as an academic exercise quickly surfaced a broader insight: as optical capacity scales and hybrid architectures become more prevalent, the lack of unified software abstractions for coordinating bandwidth across domains represents a fundamental systems gap.
 
-Some early contributors participated under standard academic IP and disclosure agreements that limited public attribution, leading the project to emphasize ideas and architecture over individual authorship. This is a common practice in university-affiliated research and does not affect the openness or use of the framework. Some institions have implmented more comprehensive and restrictive IP controls as the AI revolution grows and therefore the open source community was the best forst place to begin this project.
+Some early contributors participated under standard academic IP and disclosure agreements that limited public attribution, leading the project to emphasize ideas and architecture over individual authorship. This is a common practice in university-affiliated research and does not affect the openness or use of the framework. 
 
 ## What This Project Is
 
