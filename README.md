@@ -2,23 +2,20 @@
 
 Starstream Core is an open framework for simulating and orchestrating hybrid optical–electronic integration layers for compute and network systems.
 
-Modern compute and network infrastructures increasingly combine optical components (e.g., photonic interconnects, wavelength-based transport) with traditional electronic systems (CPUs, GPUs, and packet-based networks). Starstream provides a common abstraction layer to model, simulate, and reason about these hybrid systems before deploying them in live environments.
-## Origins
+Starstream Core addresses a growing gap in modern AI-driven data center infrastructure: the lack of unified abstractions for systems that span both optical and electronic domains. As photonic interconnects, wavelength-based transport, and hybrid optical–electronic architectures become more prevalent, existing tooling often treats optical and electronic components as separate, loosely-coupled systems. This makes it difficult to reason about system-wide behavior, evaluate tradeoffs, or experiment with coordinated control strategies.
 
-The ideas behind Starstream emerged from early exploratory work and multi academic experimentations and collboratios around hybrid optical–electronic systems. As the scope and implications of the work became clearer, the project evolved into a more formal effort to define open abstractions and simulation tools that could be shared, discussed, and extended in the open.
+The goal is to **define open control and monitoring endpoints** for AI-centric data centers, where heterogeneous bandwidth domains must be coordinated across optical and electronic layers. Starstream explores bidirectional integration layers that allow software-defined control logic—implemented in Python and accelerator-oriented programming models—to map, influence, and observe optical bandwidth and signaling resources, without assuming specific hardware, vendors, or deployment environments.
 
-This repository exists to provide a structured foundation for that ongoing exploration.---
+---
 
 ## What This Project Is
 
 Starstream Core focuses on:
 
-- **Simulation** of hybrid optical–electronic systems under varying load, topology noting, and fault conditions
+- **Simulation** of hybrid optical–electronic systems under varying load, topology, and fault conditions
 - **Orchestration primitives** for coordinating optical and electronic resources
 - **Control abstractions** suitable for AI-assisted optimization and scheduling
 - **Research-friendly tooling** designed to bridge theory, simulation, and real-world infrastructure
-
-The project is intended as a foundation for experimentation, evaluation, and collaboration across compute, networking, and AI infrastructure teams.
 
 ---
 
@@ -32,18 +29,52 @@ The focus is on open interfaces, models, and simulation environments rather than
 
 ---
 
-## Core Concepts (High Level)
+## Quickstart
 
-Starstream models hybrid systems as layered integration components, including:
+Create a virtual environment and install:
 
-- Optical transport and signaling abstractions (e.g., wavelength- or channel-based resources)
-- Electronic compute and network resources
-- Control and orchestration layers that coordinate across domains
-- Feedback loops suitable for AI-driven optimization (simulated or offline)
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -e .
+```
 
-Detailed implementations will evolve incrementally as the project matures.
+Run the baseline scheduler example:
+
+```bash
+python -m examples.scheduler_baselines
+```
 
 ---
 
 ## Repository Structure
 
+```
+starstream-core/
+├── README.md
+├── LICENSE
+├── pyproject.toml
+├── docs/
+├── examples/
+└── starstream/
+```
+
+---
+
+## Status
+
+This project is in **early-stage development**.
+
+Initial releases focus on:
+- Defining core abstractions
+- Establishing simulation primitives
+- Providing minimal reference implementations
+
+Stability, performance, and production-readiness are **not** goals at this stage.
+
+---
+
+## License
+
+Starstream Core is released under the **Apache License 2.0**.  
+See the [LICENSE](LICENSE) file for details.
