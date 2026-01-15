@@ -1,6 +1,10 @@
 # Starstream Core
 
-Starstream Core is a Python-based intent language and orchestration engine that translates high-level bandwidth commands into deterministic allocation, routing, and execution across heterogeneous network substrates, including optical, electronic, and virtual networks.
+Starstream Core is a Python-based, intent-driven control plane for coordinating bandwidth, latency, and data movement across optical, electronic, and AI compute fabrics.
+
+It translates high-level intent—such as bandwidth guarantees, latency bounds, or workload communication requirements—into deterministic planning, execution, and verification actions across heterogeneous network substrates, including photonic transport, packet networks, and GPU-centric AI infrastructure.
+
+Rather than acting as a passive integration layer, Starstream Core functions as an active control system: continuously observing telemetry, evaluating constraints and policies, planning resource allocations, executing changes, and verifying outcomes in a closed loop.
 
 ## Background
 
