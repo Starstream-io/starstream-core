@@ -1,4 +1,4 @@
-# Starstream Core
+# Starstream Core   www.starstream.io
 
 Starstream Core is a Python-based, intent-driven control plane for coordinating bandwidth, latency, and data movement across optical, electronic, and AI compute fabrics.
 
