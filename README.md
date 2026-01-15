@@ -7,45 +7,34 @@ It translates high-level intent—such as bandwidth guarantees, latency bounds, 
 Rather than acting as a passive integration layer, Starstream Core functions as an active control system: continuously observing telemetry, evaluating constraints and policies, planning resource allocations, executing changes, and verifying outcomes in a closed loop.
 
 ## Background
+Background
 
-Modern compute and network infrastructure is increasingly hybrid, spanning electronic switching, optical transport, wavelength-based interconnects, and software-defined networking layers. While optical capacity continues to scale through advances in photonic integration and wavelength multiplexing, control and coordination across these heterogeneous domains remain fragmented.
+Modern data center and AI infrastructure is increasingly hybrid, spanning optical transport, electronic switching, wavelength-based interconnects, and high-performance GPU fabrics. While optical capacity and compute density continue to scale, control and coordination across these domains remains fragmented, with separate tooling for networks, photonics, and AI systems.
 
-Existing tooling typically treats optical and electronic systems as separate layers, with limited shared abstractions or unified control surfaces. This separation makes it difficult to reason about system-wide behavior, evaluate tradeoffs across domains, or experiment with coordinated allocation and routing strategies—particularly in AI-driven data center and distributed compute environments where bandwidth, latency, and topology constraints interact dynamically.
+Existing approaches typically treat optical, electronic, and compute fabrics as independent layers, limiting the ability to reason about system-wide behavior, enforce end-to-end guarantees, or optimize for shared objectives such as latency, throughput, energy efficiency, or training step time.
 
-Starstream Core addresses this gap by providing an open framework for simulating and orchestrating hybrid optical–electronic integration layers. Rather than assuming specific hardware, vendors, or deployment environments, Starstream focuses on defining programmable control and observation interfaces that allow software-defined logic to express intent, evaluate constraints, and coordinate bandwidth resources across optical, electronic, and virtual substrates. By exposing these coordination challenges at the software layer, Starstream enables developers, researchers, and system architects to design, simulate, and orchestrate bandwidth resources across optical, electronic, and virtual domains using a common control and intent framework.
+This fragmentation is especially problematic in AI-driven environments, where data movement—not computation alone—often becomes the primary bottleneck, and where optical bandwidth, network paths, and GPU communication patterns interact dynamically.
 
-## Vision
+## What Starstream Core Provides
 
-Just as cloud platforms abstracted physical hardware into programmable infrastructure, StarStream.io aims to abstract bandwidth and light into a programmable orchestration layer—enabling developers, networks, and enterprises to reason about bandwidth the way they reason about compute today. 
+Starstream Core addresses this gap by providing a unified control plane and intent framework for hybrid infrastructure. It enables developers, researchers, and system architects to:
 
-As wavelength-based capacity continues to expand, bandwidth increasingly shifts from a scarce physical resource to a programmable one. Virtualization enabled compute/network scale by abstracting hardware into programmable resources; Starstream aims to do the same for bandwidth and light by abstracting wavelength-based capacity into an orchestrated, programmable service layer.
+Express high-level intent for bandwidth, latency, and communication requirements
 
-## Project Origins
+Observe real-time telemetry across optical, electronic, and AI fabrics
 
-Starstream began as a multi-institution, cross-disciplinary exploration initiated during a technical hackathon focused on emerging challenges in optical, electronic, and AI-driven infrastructure systems. What started as an academic exercise quickly surfaced a broader insight: as optical capacity scales and hybrid architectures become more prevalent, the lack of unified software abstractions for coordinating bandwidth across domains represents a fundamental systems gap.
+Plan coordinated resource allocations across domains
 
-Some early contributors participated under standard academic IP and disclosure agreements that limited public attribution, leading the project to emphasize ideas and architecture over individual authorship. This is a common practice in university-affiliated research and does not affect the openness or use of the framework. 
+Execute actions through pluggable adapters (simulation today, hardware controllers tomorrow)
 
-## What This Project Is
+Verify outcomes and enforce policy and safety constraints
 
-Starstream Core focuses on:
+Starstream is hardware-agnostic and simulation-first, allowing teams to design, test, and evolve control logic before deploying against live optical systems, network fabrics, or AI infrastructure.
 
-- **Simulation** of hybrid optical–electronic systems under varying load, topology, and fault conditions
-- **Orchestration primitives** for coordinating optical and electronic resources
-- **Control abstractions** suitable for AI-assisted optimization and scheduling
-- **Research-friendly tooling** designed to bridge theory, simulation, and real-world infrastructure
+By elevating coordination and decision-making to the software control plane, Starstream enables principled experimentation, optimization, and orchestration across optical, electronic, and AI domains using a common intent-driven model.
 
----
-
-## What This Project Is Not
-
-- This is **not** a hardware implementation
-- This is **not** a production scheduler or control plane
-- This repository does **not** contain proprietary hardware logic or vendor-specific integrations
-
-The focus is on open interfaces, models, and simulation environments rather than deployment-ready systems.
-
----
+## What is Starstream?
+Starstream is an intent-driven software control plane that coordinates optical bandwidth and AI data movement across photonic, electronic, and GPU fabrics, enabling systems to plan, execute, and verify end-to-end communication behavior across hybrid infrastructure.
 
 ## Quickstart
 
